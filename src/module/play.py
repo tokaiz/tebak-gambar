@@ -14,7 +14,7 @@ def init(dispatcher):
 def play(update, context):
     msg = update.effective_message
     chat_data = context.chat_data
-    
+
     if "cache_game" in chat_data:
         try:
             message_id = chat_data["cache_game"]["quest_id"]

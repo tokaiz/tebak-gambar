@@ -34,10 +34,8 @@ class GameHelper:
         result = list()
 
         for elem in elem_chunk:
-            data = self.parse(str(elem))
-
-            image = self.abs_url + data.img.get("data-src")
-            answer = data.span.text
+            image = self.abs_url + elem.img.get("data-src")
+            answer = elem.span.text
 
             result.append({ "soal": image, "jawaban": answer })
 
